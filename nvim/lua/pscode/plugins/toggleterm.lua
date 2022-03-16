@@ -1,7 +1,7 @@
 local opts = {hidden = true}
 require("toggleterm").setup{
     size = 5,
-    open_mapping = [[<c-\>]],
+    open_mapping = [[<C-\>]],
     shade_filetypes = {},
     shade_terminals = true,
     shading_factor = '1', -- the degree by which to darken to terminalcolour, default: 1 for dark backgrounds, 3 for light
@@ -11,7 +11,7 @@ require("toggleterm").setup{
     shell = vim.o.shell,
     float_opts = {
         border = 'curved',
-        winblend = 3,
+        winblend = 1,
         highlights = {
           border = "Normal",
           background = "Normal",
