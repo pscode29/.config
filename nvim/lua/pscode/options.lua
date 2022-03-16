@@ -1,0 +1,38 @@
+local options = {
+    backup = false,
+    clipboard = "unnamedplus",
+    cmdheight = 2,
+    completeopt = { "menuone", "noselect" },
+    cursorline = false,
+    expandtab = true,
+    fileencoding = "utf-8",
+    hlsearch = true,
+    ignorecase = true,
+    iskeyword = "-",
+    mouse = "a",
+    number = true,
+    numberwidth = 4,
+    pumheight = 10,
+    relativenumber = true,
+    scrolloff = 8,
+    sidescrolloff = 8,
+    signcolumn = "yes",
+    shiftwidth = 4,
+    showmode = true,
+    smartcase = true,
+    smartindent = true,
+    splitbelow = true,
+    splitright = true,
+    swapfile = false,
+    tabstop = 4,
+    termguicolors = true,
+    undofile = true,
+    updatetime = 150,
+    whichwrap = "<,>,[,],h,l",
+    writebackup = false,
+    wrap = false,
+}
+
+for k, v in pairs(options) do
+  vim.opt[k] = v
+end

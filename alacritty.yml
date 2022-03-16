@@ -1,0 +1,295 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator. This is for MacOS Big Sur.
+#  Read more about each options here - https://github.com/alacritty/alacritty/blob/master/alacritty.yml
+env:
+  TERM: xterm-256color
+
+window:
+
+  # Window padding (changes require restart)
+  padding:
+   x: 10
+   y: 40 #(To have a nice gap betweem buttons and prompt in transparent decorations)
+
+  # Window decorations
+  # The values are - full or none or transparent(macOS only) or buttonless(macOS only)
+  decorations: transparent
+
+  # Background opacity
+  # The value `0.0` is completely transparent and `1.0` is opaque.
+  opacity: 1.0
+
+  # Startup Mode (changes require restart)
+  startup_mode: Windowed
+
+  # Window title
+  title: OneHotCode
+
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  history: 2000
+
+  # Scrolling distance multiplier.
+  multiplier: 4
+
+# Font configuration
+font:
+  # Normal (roman) font face
+  normal:
+    family: FiraCode Nerd Font
+    style: Retina
+
+  # Bold font face
+  bold:
+    family: FiraCode Nerd Font
+    style: Bold
+
+  # Italic font face
+  italic:
+    family: FiraCode Nerd Font
+    style: Retina
+
+  # Bold italic font face
+  bold_italic:
+    family: FiraCode Nerd Font
+    style: Bold
+
+  # Point size
+  size: 16.0
+
+  # Offset is the extra space around each character. `offset.y` can be thought
+  # of as modifying the line spacing, and `offset.x` as modifying the letter
+  # spacing.
+  offset:
+   x: 0
+   y: 25 
+
+  # Thin stroke font rendering (macOS only)
+  # Thin strokes are suitable for retina displays, but for non-retina screens
+  # it is recommended to set `use_thin_strokes` to `false`.
+  use_thin_strokes: true
+
+# If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors: true
+
+# Bell
+# The bell is rung every time the BEL control character is received.
+bell:
+  # Visual Bell Animation
+  animation: EaseOutExpo
+
+  # Duration of the visual bell flash in milliseconds. A `duration` of `0` will
+  # disable the visual bell animation.
+  duration: 0
+
+  # Visual bell animation color.
+  color: '#ffffff'
+
+selection:
+  # This string contains all characters that are used as separators for
+  # "semantic words" in Alacritty.
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+
+  # When set to `true`, selected text will be copied to the primary clipboard.
+  save_to_clipboard: false
+
+cursor:
+  # Cursor style
+  style:
+    # Cursor shape
+    #
+    # Values for `shape`:
+    # - ▇ Block
+    #   - _ Underline
+    #   - | Beam
+    shape: Block
+
+    # Cursor blinking state
+    blinking: Off
+
+  # If this is `true`, the cursor will be rendered as a hollow box when the
+  # window is not focused.
+  unfocused_hollow: true
+
+#######################################
+##           COLOR THEMES            ##
+#######################################
+# Refer for more - https://github.com/alacritty/alacritty/wiki/Color-schemes
+schemes:
+  
+  OneDark: &OneDark
+    # Default colors
+    primary:
+      background: '0x282c34'
+      foreground: '0xabb2bf'
+
+    # Selection colors
+    selection:
+      text:       CellForeground
+      background: '0x393f4a'
+
+    # Normal colors
+    normal:
+      black:   '0x20232A'
+      red:     '0xe06c75'
+      green:   '0x98c379'
+      yellow:  '0xebd09c'
+      blue:    '0x61afef'
+      magenta: '0xc678dd'
+      cyan:    '0x56b6c2'
+      white:   '0x798294'
+
+    # Bright colors
+    bright:
+      black:   '0x798294'
+      red:     '0xe86671'
+      green:   '0x98c379'
+      yellow:  '0xe5c07b'
+      blue:    '0x528bff'
+      magenta: '0xc678dd'
+      cyan:    '0x56b6c2'
+      white:   '0xabb2bf'
+
+  indexed_colors:
+    - { index: 16, color: '0xd19a66' }
+    - { index: 17, color: '0xf65866' }
+
+  MonokaiPro: &MonokaiPro
+    # Default colors
+    primary:
+      background: '#2D2A2E'
+      foreground: '#FCFCFA'
+
+    # Normal colors
+    normal:
+      black:   '#403E41'
+      red:     '#FF6188'
+      green:   '#A9DC76'
+      yellow:  '#FFD866'
+      blue:    '#FC9867'
+      magenta: '#AB9DF2'
+      cyan:    '#78DCE8'
+      white:   '#FCFCFA'
+
+    # Bright colors
+    bright:
+      black:   '#727072'
+      red:     '#FF6188'
+      green:   '#A9DC76'
+      yellow:  '#FFD866'
+      blue:    '#FC9867'
+      magenta: '#AB9DF2'
+      cyan:    '#78DCE8'
+      white:   '#FCFCFA'
+
+  ### Nord ###
+  Nord: &Nord
+    # Default colors
+    primary:
+      background: '#2E3440'
+      foreground: '#D8DEE9'
+
+    # Normal colors
+    normal:
+      black:   '#3B4252'
+      red:     '#BF616A'
+      green:   '#A3BE8C'
+      yellow:  '#EBCB8B'
+      blue:    '#81A1C1'
+      magenta: '#B48EAD'
+      cyan:    '#88C0D0'
+      white:   '#E5E9F0'
+
+    # Bright colors
+    bright:
+      black:   '#4C566A'
+      red:     '#BF616A'
+      green:   '#A3BE8C'
+      yellow:  '#EBCB8B'
+      blue:    '#81A1C1'
+      magenta: '#B48EAD'
+      cyan:    '#8FBCBB'
+      white:   '#ECEFF4'
+
+  ### Oceanic Next ###
+  OceanicNext: &OceanicNext
+    # Default colors
+    primary:
+      background: '#1b2b34'
+      foreground: '#d8dee9'
+
+    # Normal colors
+    normal:
+      black:   '#343d46'
+      red:     '#EC5f67'
+      green:   '#99C794'
+      yellow:  '#FAC863'
+      blue:    '#6699cc'
+      magenta: '#c594c5'
+      cyan:    '#5fb3b3'
+      white:   '#d8dee9'
+
+    # Bright colors
+    bright:
+      black:   '#343d46'
+      red:     '#EC5f67'
+      green:   '#99C794'
+      yellow:  '#FAC863'
+      blue:    '#6699cc'
+      magenta: '#c594c5'
+      cyan:    '#5fb3b3'
+      white:   '#d8dee9'
+
+  ### Tomorrow Night ###
+  TomorrowNight: &TomorrowNight
+     # Default colors
+    primary:
+      background: '#1d1f21'
+      foreground: '#c5c8c6'
+      
+    # Normal colors
+    normal:
+      black:   '#1d1f21'
+      red:     '#cc6666'
+      green:   '#b5bd68'
+      yellow:  '#e6c547'
+      blue:    '#81a2be'
+      magenta: '#b294bb'
+      cyan:    '#70c0ba'
+      white:   '#373b41'
+
+    # Bright colors
+    bright:
+      black:   '#666666'
+      red:     '#ff3334'
+      green:   '#9ec400'
+      yellow:  '#f0c674'
+      blue:    '#81a2be'
+      magenta: '#b77ee0'
+      cyan:    '#54ced6'
+      white:   '#282a2e'
+
+colors: *Nord
+# Refer to official config for more color options for searches, vi mode, bars, etc
+# https://github.com/alacritty/alacritty/blob/master/alacritty.yml
+#######################################
+##       END OF COLOR SCHEMES        ##
+#######################################
+
+# shell
+# My default login shell is zsh, hence I commented following out. Problem with 
+# providing explicit path below is that alacritty was ignoring some binary paths 
+# for e.g. paths of apps installed from brew etc .Just run this in your terminal 
+# and do not set shell value here - `chsh -s /bin/zsh`
+# shell:
+#  program: /bin/zsh
+
+
+# Key bindings
+# I am happy with default bindings at the moment
+# key_bindings:
+
+  #- { key: Paste,                                       action: Paste          }
+  #- { key: Copy,                                        action: Copy           }
+  #- { key: L,         mods: Control,                    action: ClearLogNotice }
+  #######################################EOF#######################################

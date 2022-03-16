@@ -1,0 +1,3 @@
+- Make NvimTree look better
+- Learn how to use ToggleTerm
+- Configure LuaLine and BufferLine further
