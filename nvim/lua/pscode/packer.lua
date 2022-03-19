@@ -67,7 +67,7 @@ return require('packer').startup(function(use)
     use {"nvim-lualine/lualine.nvim"}
 
     -- Bufferline
-    -- use {"akinsho/bufferline.nvim"}
+    use {"akinsho/bufferline.nvim"}
 
     -- Toggleterm
     use {"akinsho/toggleterm.nvim"}

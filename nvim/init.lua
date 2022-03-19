@@ -28,7 +28,7 @@ require "pscode.plugins.comment"
 require "pscode.plugins.lualine"
 
 -- Bufferline
--- require "pscode.plugins.bufferline"
+require "pscode.plugins.bufferline"
 
 -- Toggleterm
 require "pscode.plugins.toggleterm"
