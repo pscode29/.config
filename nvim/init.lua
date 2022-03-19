@@ -33,6 +33,6 @@ require "pscode.plugins.bufferline"
 -- Toggleterm
 require "pscode.plugins.toggleterm"
 
-
-
+-- Autopair
+require "pscode.plugins.autopair"
 

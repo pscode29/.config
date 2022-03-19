@@ -72,6 +72,8 @@ return require('packer').startup(function(use)
     -- Toggleterm
     use {"akinsho/toggleterm.nvim"}
 
+    -- Autopair
+    use {"windwp/nvim-autopairs"}
     
     if packer_bootstrap then
       require('packer').sync()
