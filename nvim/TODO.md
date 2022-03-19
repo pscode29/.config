@@ -1,2 +1,1 @@
-- Make NvimTree look better
-- Configure LuaLine and BufferLine further
+- Setup debugger
