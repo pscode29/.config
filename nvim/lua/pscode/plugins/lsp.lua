@@ -5,7 +5,7 @@ local opts = { noremap=true, silent=true }
 vim.api.nvim_set_keymap('n', '<leader>d', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>p', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>n', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
-vim.api.nvim_set_keymap('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>l', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
 
 -- Following key maps will only work once a language server is attached to the buffer
 local on_attach = function(client, bufnr)
@@ -25,6 +25,7 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gf', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
+-- LSP setup and completion enablement
 local lspconfig = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
@@ -39,6 +40,14 @@ for _, lsp in pairs(servers) do
     }
 end
 
+-- Language server installer
+local lsp_installer = require("nvim-lsp-installer")
+lsp_installer.on_server_ready(function(server)
+    local opts = {}
+    server:setup(opts)
+end)
+
+-- Work on the looks
 vim.fn.sign_define(
   "DiagnosticSignError",
   { texthl = "DiagnosticSignError", text = "", numhl = "DiagnosticSignError" }
@@ -75,3 +84,13 @@ local border_style = {
 local popups = { border = border_style }
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, popups)
 vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, popups)
+
+------------- Some commands for lsp 
+-- :Lsp<TAB>
+------------- Some commands just for langauge server installer
+-- :LspInstall<Tab>
+-- :LspInstallInfo
+-- i agains a serve:r will install that server
+-- u to update
+-- U to update all servers
+-- X to uninstall servers

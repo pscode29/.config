@@ -38,21 +38,23 @@ return require('packer').startup(function(use)
     use "folke/tokyonight.nvim"
     
     -- File explorers
-    use "kyazdani42/nvim-tree.lua"  -- https://github.com/kyazdani42/nvim-tree.lua
+    use "kyazdani42/nvim-tree.lua"
 
     -- Telescope
     use "nvim-telescope/telescope.nvim"
 
     -- LSPs
-    use "neovim/nvim-lspconfig"  -- https://github.com/neovim/nvim-lspconfig
-    use "glepnir/lspsaga.nvim"
+    use "neovim/nvim-lspconfig"
+    use "williamboman/nvim-lsp-installer"
 
     -- Completions 
-    use 'hrsh7th/nvim-cmp'  -- Plugin that enables completion - https://github.com/hrsh7th/nvim-cmp
+    use 'hrsh7th/nvim-cmp'  -- Plugin that enables completion
+    use 'L3MON4D3/LuaSnip'  -- Snippet completion engine/parser, not just for lua, needed for all languages, even if you do not use snippets
     -- Completion sources
     use 'hrsh7th/cmp-nvim-lsp'  -- Plugin that provides completion source from language servers, this is used in lsp.lua
     use 'hrsh7th/cmp-buffer'  -- Plugin that provides completion source from buffer 
     use 'hrsh7th/cmp-path'  -- Plugin that provides completion source for paths 
+    use "saadparwaiz1/cmp_luasnip" -- snippet completions source
 
     -- Treesitter
     use {

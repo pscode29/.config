@@ -47,3 +47,9 @@ keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 
 -- Close all my buffers
 keymap("n", "<leader>Q", ":bufdo bdelete<cr>", opts)
+-- Save current buffer
+keymap("n", "<leader>s", ":w<cr>", opts)
+-- Save and Exit
+keymap("n", "<leader>ss", ":wq<cr>", opts)
+-- Force Exit
+keymap("n", "<leader>q", ":q!<cr>", opts)

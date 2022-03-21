@@ -1,4 +1,5 @@
 local cmp = require "cmp"
+local luasnip = require "luasnip"
 
 local kind_icons = {
   Text = "",
@@ -29,7 +30,11 @@ local kind_icons = {
 }
 
 cmp.setup({
-    -- snippet = {} -- I do not use snippets, add here if required
+    snippet = {
+        expand = function(args)
+        luasnip.lsp_expand(args.body)
+        end,
+    },
     mapping = {
         ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),  -- Helps scrolling left I guess
         ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),  -- Helps scrolling right I guess 
@@ -42,9 +47,9 @@ cmp.setup({
     },
     sources = cmp.config.sources{
         { name = 'nvim_lsp'},  -- From that lsp completion source
+        { name = 'luasnip' },  -- From luasnip plugin
         { name = 'buffer'},  -- From that buffer completion source
         { name = 'path'},  -- From that path completion source
-        { name = 'cmdline'},  -- From that command line completion source
     documentation = {
         border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
     },
@@ -54,6 +59,7 @@ cmp.setup({
         vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind)
         vim_item.menu = ({
             nvim_lsp = "[LSP]",
+            luasnip = "[Snippet]",
             buffer = "[Buffer]",
             path = "[Path]"
         })[entry.source.name]
