@@ -8,7 +8,7 @@ window:
   # Window padding (changes require restart)
   padding:
    x: 10
-   y: 40 #(To have a nice gap betweem buttons and prompt in transparent decorations)
+   y: 10 #(To have a nice gap betweem buttons and prompt in transparent decorations)
 
   # Window decorations
   # The values are - full or none or transparent(macOS only) or buttonless(macOS only)

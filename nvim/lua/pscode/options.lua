@@ -3,6 +3,7 @@ local options = {
     clipboard = "unnamedplus",
     cmdheight = 2,
     completeopt = { "menuone", "noselect" },
+    colorcolumn = "80",
     cursorline = false,
     expandtab = true,
     fileencoding = "utf-8",

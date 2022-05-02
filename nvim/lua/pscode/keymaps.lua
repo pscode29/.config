@@ -51,5 +51,9 @@ keymap("n", "<leader>Q", ":bufdo bdelete<cr>", opts)
 keymap("n", "<leader>s", ":w<cr>", opts)
 -- Save and Exit
 keymap("n", "<leader>ss", ":wq<cr>", opts)
--- Force Exit
+-- Force exit
 keymap("n", "<leader>q", ":q!<cr>", opts)
+
+-- CTRL l to jump end of line from insert mode, I use it when I am inside "" or () or {} or [] etc, I love it 
+keymap("i", "<C-l>", "<C-o>A", opts)
+

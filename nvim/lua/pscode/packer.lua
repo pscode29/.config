@@ -36,6 +36,7 @@ return require('packer').startup(function(use)
     
     -- Colorschemes
     use "folke/tokyonight.nvim"
+    use "ful1e5/onedark.nvim"
     
     -- File explorers
     use "kyazdani42/nvim-tree.lua"

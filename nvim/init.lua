@@ -4,7 +4,8 @@ require "pscode.keymaps"
 require "pscode.packer"
 
 -- Colorschemes
-require "pscode.colorschemes.tokyonight"
+-- require "pscode.colorschemes.tokyonight"
+require "pscode.colorschemes.onedark"
 
 -- File Explorers
 require "pscode.plugins.nvim-tree"
