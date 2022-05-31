@@ -1,1 +1,0 @@
-- Configure starship prompt. It is installed but not configured.

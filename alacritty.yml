@@ -55,14 +55,14 @@ font:
     style: Bold
 
   # Point size
-  size: 20.0 
+  size: 18.0 
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
   offset:
    x: 0
-   y: 25 
+   y: 8 
 
   # Thin stroke font rendering (macOS only)
   # Thin strokes are suitable for retina displays, but for non-retina screens
@@ -269,7 +269,7 @@ schemes:
       cyan:    '#54ced6'
       white:   '#282a2e'
 
-colors: *Nord
+colors: *TomorrowNight
 # Refer to official config for more color options for searches, vi mode, bars, etc
 # https://github.com/alacritty/alacritty/blob/master/alacritty.yml
 #######################################

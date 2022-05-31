@@ -7,7 +7,7 @@ require "pscode.packer"
 -- require "pscode.colorschemes.tokyonight"
 require "pscode.colorschemes.onedark"
 
--- File Explorers
+-- File Explorer
 require "pscode.plugins.nvim-tree"
 
 --Telescope
@@ -16,7 +16,7 @@ require "pscode.plugins.telescope"
 -- LSPs
 require "pscode.plugins.lsp"
 
--- Completions 
+-- Completions
 require "pscode.plugins.cmp"
 
 -- Treesitter
