@@ -1,0 +1,1 @@
+- Telescope does not work for live grep etc
