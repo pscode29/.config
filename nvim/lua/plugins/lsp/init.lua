@@ -47,11 +47,11 @@ if status_ok then
     end
   end
 
-print("Pushpraj: This msg is coming from lsp/handlers.lua")
-print("I have following language servers installed - ")
+-- print("Pushpraj: This msg is coming from lsp/handlers.lua")
+-- print("I have following language servers installed - ")
   -- For each server, add these capabilities, on attach actions and additional server specific settings
   for _, server in ipairs(servers) do
-    print(server)
+    -- print(server)
     local opts = M.server_settings(server)
     lspconfig[server].setup(opts)
   end
