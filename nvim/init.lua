@@ -13,6 +13,7 @@ for _, source in ipairs {
     "plugins.toggleterm",
     "plugins.lualine",
     "plugins.bufferline",
+    "plugins.autopairs",
     "colorschemes.tokyonight",
   } do
     local status_ok, fault = pcall(require, source)

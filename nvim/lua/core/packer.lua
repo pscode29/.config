@@ -73,6 +73,8 @@ packer.startup {
     use "nvim-lualine/lualine.nvim"
     -- Bufferline
     use "akinsho/bufferline.nvim"
+    -- Autopair
+    use "windwp/nvim-autopairs"
 
 
     -- Colorschemes
