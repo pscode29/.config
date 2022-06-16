@@ -75,7 +75,7 @@ keymap("n", "<leader>g", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 keymap("n", "<leader>km", "<cmd>Telescope keymaps<cr>", opts)
 
--- Terminal
+-- ToggleTerm
 keymap("n", "<C-\\>", "<cmd>ToggleTerm<cr>", { desc = "Toggle terminal" })
 keymap("n", "<leader>tf", "<cmd>ToggleTerm direction=float<cr>", { desc = "ToggleTerm float" })
 keymap("n", "<leader>th", "<cmd>ToggleTerm size=10 direction=horizontal<cr>", { desc = "ToggleTerm horizontal split" })

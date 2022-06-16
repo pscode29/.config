@@ -1,7 +1,6 @@
 for _, source in ipairs {
     "core.options",
-    "core.keymaps",
-    "core.packer",
+    "core.keymaps", "core.packer",
     "plugins.icons",
     "plugins.neo-tree",
     "plugins.treesitter",
@@ -11,6 +10,7 @@ for _, source in ipairs {
     "plugins.lsp",
     "plugins.aerial",
     "plugins.comment",
+    "plugins.toggleterm",
     "plugins.lualine",
     "plugins.bufferline",
     "colorschemes.tokyonight",
